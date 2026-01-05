@@ -13,8 +13,21 @@
 </head>
 <body>
 
+  <!-- Loading Animation -->
+  <div class="loader" id="loader">
+    <div class="loader-content">
+      <div class="loader-logo">BNJS</div>
+    </div>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Nach oben">↑</button>
+
   <!-- Navigation -->
-  <nav class="navbar">
+  <nav class="navbar" id="navbar">
     <div class="container nav-container">
       <a href="#" class="logo">
         <img src="logo.svg" alt="BNJS Logo" class="logo-img">
@@ -46,17 +59,17 @@
   <section class="features" id="features">
     <div class="container">
       <div class="features-grid">
-        <div class="feature-card">
+        <div class="feature-card fade-in">
           <div class="feature-icon">🌐</div>
           <h3>Schnelles Internet</h3>
           <p>Für alle — Stadt & Land verbunden.</p>
         </div>
-        <div class="feature-card">
+        <div class="feature-card fade-in">
           <div class="feature-icon">📚</div>
           <h3>Moderne Bildung</h3>
           <p>Digitale Schulen & Chancen für jede:n.</p>
         </div>
-        <div class="feature-card">
+        <div class="feature-card fade-in">
           <div class="feature-icon">⚖️</div>
           <h3>Faire Regeln</h3>
           <p>Fortschritt mit Verantwortung.</p>
@@ -68,15 +81,15 @@
   <!-- Über uns -->
   <section class="about" id="about">
     <div class="container">
-      <h2>Über uns</h2>
-      <p class="section-text">
+      <h2 class="fade-in">Über uns</h2>
+      <p class="section-text fade-in">
         BNJS steht für eine zukunftsorientierte Politik: Wir verbinden technisches Know‑how mit sozialer Verantwortung. 
         Unser Ziel ist eine digitale, faire und sichere Gesellschaft — für alle Menschen in Deutschland.
       </p>
       
       <!-- Erweiterte Info -->
       <div class="about-extended">
-        <div class="about-block">
+        <div class="about-block fade-in-left">
           <h3>Wer wir sind</h3>
           <p>
             BNJS ist eine junge politische Bewegung, gegründet von engagierten Schülern und Studierenden, 
@@ -84,7 +97,7 @@
             unserer Gründungsmitglieder — vereint durch gemeinsame Werte und den Willen zur Veränderung.
           </p>
         </div>
-        <div class="about-block">
+        <div class="about-block fade-in">
           <h3>Wofür wir stehen</h3>
           <p>
             Wir glauben, dass Digitalisierung kein Selbstzweck ist, sondern ein Werkzeug für mehr Gerechtigkeit. 
@@ -92,7 +105,7 @@
             das sind keine Luxuswünsche, sondern Grundlagen für eine funktionierende Demokratie im 21. Jahrhundert.
           </p>
         </div>
-        <div class="about-block">
+        <div class="about-block fade-in-right">
           <h3>Was uns antreibt</h3>
           <p>
             Wir sind überzeugt: Politik muss von denen gemacht werden, die die Zukunft leben werden. 
@@ -103,15 +116,15 @@
       </div>
 
       <div class="values-grid">
-        <div class="value-item">
+        <div class="value-item fade-in">
           <strong>🎯 Mission</strong>
           <p>Politik für das digitale Zeitalter gestalten.</p>
         </div>
-        <div class="value-item">
+        <div class="value-item fade-in">
           <strong>💡 Vision</strong>
           <p>Eine Gesellschaft, in der Technik allen dient.</p>
         </div>
-        <div class="value-item">
+        <div class="value-item fade-in">
           <strong>🤝 Werte</strong>
           <p>Transparenz, Gerechtigkeit, Innovation.</p>
         </div>
@@ -119,30 +132,30 @@
       
       <!-- Kernprinzipien -->
       <div class="principles">
-        <h3>Unsere Kernprinzipien</h3>
+        <h3 class="fade-in">Unsere Kernprinzipien</h3>
         <div class="principles-list">
-          <div class="principle">
+          <div class="principle fade-in">
             <span class="principle-icon">✓</span>
             <div>
               <strong>Bürgernah</strong>
               <p>Wir hören zu und handeln im Interesse aller.</p>
             </div>
           </div>
-          <div class="principle">
+          <div class="principle fade-in">
             <span class="principle-icon">✓</span>
             <div>
               <strong>Zukunftsorientiert</strong>
               <p>Wir denken langfristig und nachhaltig.</p>
             </div>
           </div>
-          <div class="principle">
+          <div class="principle fade-in">
             <span class="principle-icon">✓</span>
             <div>
               <strong>Transparent</strong>
               <p>Offene Kommunikation und ehrliche Politik.</p>
             </div>
           </div>
-          <div class="principle">
+          <div class="principle fade-in">
             <span class="principle-icon">✓</span>
             <div>
               <strong>Inklusiv</strong>
@@ -157,31 +170,31 @@
   <!-- Programm -->
   <section class="programm" id="programm">
     <div class="container">
-      <h2>Unser Programm</h2>
-      <p class="section-subtitle">Unsere Visionen für Deutschland</p>
+      <h2 class="fade-in">Unser Programm</h2>
+      <p class="section-subtitle fade-in">Unsere Visionen für Deutschland</p>
       
       <div class="programm-grid">
-        <div class="programm-card">
+        <div class="programm-card fade-in">
           <h3>🔧 Technik & Fortschritt</h3>
           <p>Wir nutzen Technik, um Alltagsprobleme zu lösen, Bildung, Arbeit und Gesundheit gerechter und effizienter zu gestalten.</p>
         </div>
-        <div class="programm-card">
+        <div class="programm-card fade-in">
           <h3>🚌 Öffentliche Verkehrsmittel</h3>
           <p>Verlässliche, günstige und vernetzte Verkehrsmittel, die Stadt und Land nachhaltig verbinden.</p>
         </div>
-        <div class="programm-card">
+        <div class="programm-card fade-in">
           <h3>🛡️ Sicherheit</h3>
           <p>Mehr Sicherheit durch Prävention und moderne Technik, ohne Freiheitsrechte unnötig einzuschränken.</p>
         </div>
-        <div class="programm-card">
+        <div class="programm-card fade-in">
           <h3>⚖️ Gerechtigkeit</h3>
           <p>Chancengleichheit durch Zugang zu Bildung, Infrastruktur und wirtschaftlichen Möglichkeiten für alle.</p>
         </div>
-        <div class="programm-card">
+        <div class="programm-card fade-in">
           <h3>💶 Inflationsbremse</h3>
           <p>Wirtschaftliche Stabilität durch verantwortungsvolle, zukunftsorientierte Finanzpolitik, die Kaufkraft schützt.</p>
         </div>
-        <div class="programm-card">
+        <div class="programm-card fade-in">
           <h3>💻 Digitalisierung</h3>
           <p>Flächendeckender Glasfaser- und 5G-Ausbau, digitale Verwaltung und moderne IT-Ausstattung für Schulen.</p>
         </div>
@@ -192,31 +205,31 @@
   <!-- Team -->
   <section class="team" id="team">
     <div class="container">
-      <h2>Unser Team</h2>
-      <p class="section-subtitle">Die Menschen hinter BNJS</p>
+      <h2 class="fade-in">Unser Team</h2>
+      <p class="section-subtitle fade-in">Die Menschen hinter BNJS</p>
       
       <div class="team-grid">
-        <div class="team-card">
+        <div class="team-card fade-in" data-tooltip="Parteivorsitzender">
           <div class="team-avatar">👤</div>
           <h4>Nils Jonas Schulte</h4>
           <p class="team-role">Parteivorsitzender</p>
         </div>
-        <div class="team-card">
+        <div class="team-card fade-in" data-tooltip="Finanzen">
           <div class="team-avatar">👤</div>
           <h4>Thomas Sinnecker</h4>
           <p class="team-role">Finanzen</p>
         </div>
-        <div class="team-card">
+        <div class="team-card fade-in" data-tooltip="Pressesprecher">
           <div class="team-avatar">👤</div>
           <h4>Leon Driese</h4>
           <p class="team-role">Pressesprecher</p>
         </div>
-        <div class="team-card">
+        <div class="team-card fade-in" data-tooltip="IT / Cyber">
           <div class="team-avatar">👤</div>
           <h4>Domenik Maliszewski</h4>
           <p class="team-role">IT / Cyber</p>
         </div>
-        <div class="team-card">
+        <div class="team-card fade-in" data-tooltip="Bildung">
           <div class="team-avatar">👤</div>
           <h4>Leo Militic</h4>
           <p class="team-role">Bildung</p>
@@ -228,8 +241,8 @@
   <!-- Termine -->
   <section class="termine" id="termine">
     <div class="container">
-      <h2>Termine & Events</h2>
-      <div class="coming-soon">
+      <h2 class="fade-in">Termine & Events</h2>
+      <div class="coming-soon fade-in">
         <div class="coming-soon-icon">📅</div>
         <h3>Coming Soon</h3>
         <p>Unsere nächsten Veranstaltungen und Info-Abende werden hier bald angekündigt.</p>
@@ -241,21 +254,21 @@
   <!-- Mitmachen -->
   <section class="mitmachen" id="mitmachen">
     <div class="container">
-      <h2>Mitmachen</h2>
-      <p class="section-text">Unterstütze BNJS: Werde Mitglied oder komm zum nächsten Info-Treffen vorbei!</p>
+      <h2 class="fade-in">Mitmachen</h2>
+      <p class="section-text fade-in">Unterstütze BNJS: Werde Mitglied oder komm zum nächsten Info-Treffen vorbei!</p>
       
       <div class="mitmachen-grid">
-        <div class="mitmachen-card">
+        <div class="mitmachen-card fade-in">
           <h3>📝 Mitglied werden</h3>
           <p>Werde Teil unserer Bewegung und gestalte die digitale Zukunft mit.</p>
           <div class="coming-soon-badge">Coming Soon</div>
         </div>
-        <div class="mitmachen-card">
+        <div class="mitmachen-card fade-in">
           <h3>📣 Aktiv werden</h3>
           <p>Hilf bei Aktionen, Events und Kampagnen in deiner Region.</p>
           <div class="coming-soon-badge">Coming Soon</div>
         </div>
-        <div class="mitmachen-card">
+        <div class="mitmachen-card fade-in">
           <h3>💬 Kontakt</h3>
           <p>Fragen, Ideen, Feedback? Schreib uns!</p>
           <a href="mailto:kontakt@bnjs.de" class="btn btn-secondary">E-Mail senden</a>
@@ -313,6 +326,63 @@
   </footer>
 
   <script>
+    // Loading Animation
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        document.getElementById('loader').classList.add('hidden');
+      }, 800);
+    });
+
+    // Scroll Progress Bar
+    window.addEventListener('scroll', function() {
+      const scrollTop = document.documentElement.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const progress = (scrollTop / scrollHeight) * 100;
+      document.getElementById('scrollProgress').style.width = progress + '%';
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Back to Top Button
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 500) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+
+    backToTop.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Scroll Animations (Intersection Observer)
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right').forEach(el => {
+      observer.observe(el);
+    });
+
     // Simple mobile menu toggle
     document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
       document.querySelector('.nav-links').classList.toggle('active');
