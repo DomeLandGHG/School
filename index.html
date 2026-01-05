@@ -34,11 +34,12 @@
         <span>BNJS</span>
       </a>
       <ul class="nav-links">
-        <li><a href="#about">Über uns</a></li>
-        <li><a href="#programm">Programm</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#termine">Termine</a></li>
-        <li><a href="#mitmachen" class="btn btn-nav">Mitmachen</a></li>
+        <li><a href="#hero" data-section="hero">Home</a></li>
+        <li><a href="#about" data-section="about">Über uns</a></li>
+        <li><a href="#programm" data-section="programm">Programm</a></li>
+        <li><a href="#team" data-section="team">Team</a></li>
+        <li><a href="#termine" data-section="termine">Termine</a></li>
+        <li><a href="#mitmachen" class="btn btn-nav" data-section="mitmachen">Mitmachen</a></li>
       </ul>
       <button class="mobile-menu-btn" aria-label="Menü">☰</button>
     </div>
@@ -352,23 +353,27 @@
     });
 
     // Active navigation highlighting based on scroll position
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+    const sections = document.querySelectorAll('section[id], header[id]');
+    const navLinks = document.querySelectorAll('.nav-links a[data-section]');
 
     function updateActiveNav() {
       let current = '';
+      let scrollPos = window.scrollY + 150; // Offset for navbar height
       
       sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        if (window.scrollY >= (sectionTop - 100)) {
-          current = section.getAttribute('id');
+        const sectionId = section.getAttribute('id');
+        
+        if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+          current = sectionId;
         }
       });
 
       navLinks.forEach(link => {
         link.classList.remove('active');
-        if (link.getAttribute('href') === '#' + current) {
+        const linkSection = link.getAttribute('data-section');
+        if (linkSection === current) {
           link.classList.add('active');
         }
       });
