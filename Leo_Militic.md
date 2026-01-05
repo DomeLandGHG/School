@@ -1,4 +1,4 @@
-# Leo_Militic.md - Präsentationsteil: Über uns
+# Leo_Militic.md - Präsentationsteil: Über uns 2
 
 ## Präsentationstext für Leo Militic (Bildung)
 

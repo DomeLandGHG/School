@@ -182,11 +182,6 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  transition: var(--transition);
-}
-
-.logo:hover {
-  transform: scale(1.05);
 }
 
 .logo-img {
