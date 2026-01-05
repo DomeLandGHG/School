@@ -219,6 +219,13 @@ body {
   font-weight: 500;
   transition: var(--transition);
   position: relative;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.nav-links a.active {
+  background: var(--primary-light);
+  color: var(--primary);
 }
 
 .nav-links a::after {
@@ -284,6 +291,10 @@ body {
   padding: 10px 20px;
   background: var(--primary);
   color: var(--light) !important;
+}
+
+.btn-nav.active {
+  background: var(--primary-dark);
 }
 
 /* Hero */
