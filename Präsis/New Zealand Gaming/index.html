@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gaming Industry in New Zealand</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Controls -->
+    <div class="nav-controls">
+        <button class="nav-btn" id="prevBtn">◀</button>
+        <div class="slide-counter">
+            <span id="currentSlide">1</span> / <span id="totalSlides">10</span>
+        </div>
+        <button class="nav-btn" id="nextBtn">▶</button>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <!-- Presentation Container -->
+    <div class="presentation">
+        
+        <!-- Title Slide -->
+        <section class="slide active" data-slide="0">
+            <div class="slide-content title-slide">
+                <div class="nz-map-bg"></div>
+                <div class="gaming-particles"></div>
+                <h1 class="main-title">The Gaming Industry in <span class="highlight">New Zealand</span></h1>
+                <h2 class="subtitle">How New Zealand Became a Global Player in Video Game Development</h2>
+                <div class="title-stats">
+                    <div class="stat-box glow">
+                        <div class="stat-number">NZ$759M</div>
+                        <div class="stat-label">Revenue (2025)</div>
+                    </div>
+                    <div class="stat-box glow">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Export Revenue</div>
+                    </div>
+                </div>
+            </div>
+            <div class="speaker-notes">
+                Welcome! Today we'll explore how New Zealand has become a major player in global game development, with nearly $760 million in revenue and successful studios competing on the world stage.
+            </div>
+        </section>
+
+        <!-- Slide 1: Introduction -->
+        <section class="slide" data-slide="1">
+            <div class="slide-content">
+                <h2 class="slide-title">Introduction to NZ Gaming</h2>
+                <div class="content-grid">
+                    <div class="content-left">
+                        <div class="info-card">
+                            <h3>🎮 Global Gaming Industry</h3>
+                            <p>The worldwide gaming industry is worth over <strong>$200 billion</strong>, making it larger than movies and music combined.</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>🇳🇿 New Zealand's Rising Role</h3>
+                            <p>New Zealand has emerged as a <strong>hub for innovative game development</strong>, punching well above its weight on the global stage.</p>
+                        </div>
+                        <div class="info-card highlight-card">
+                            <h3>📊 Key Statistics (2025)</h3>
+                            <ul class="stat-list">
+                                <li><strong>NZ$759 million</strong> in annual revenue</li>
+                                <li><strong>95%</strong> of revenue from exports</li>
+                                <li>Growing <strong>400%+</strong> since 2018</li>
+                                <li>Competing with global AAA studios</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content-right">
+                        <div class="icon-grid">
+                            <div class="game-icon">🎯</div>
+                            <div class="game-icon">🎲</div>
+                            <div class="game-icon">🎪</div>
+                            <div class="game-icon">🚀</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="speaker-notes">
+                New Zealand's game industry has grown tremendously. The global gaming market is enormous, and NZ developers have found their place by creating innovative, high-quality games that compete internationally. The fact that 95% of revenue comes from exports shows the global appeal of NZ-made games.
+            </div>
+        </section>
+
+        <!-- Slide 2: Growth of the Industry -->
+        <section class="slide" data-slide="2">
+            <div class="slide-content">
+                <h2 class="slide-title">Explosive Growth (2018-2025)</h2>
+                <div class="growth-container">
+                    <div class="chart-container">
+                        <canvas id="growthChart"></canvas>
+                    </div>
+                    <div class="growth-insights">
+                        <h3>Why is the industry growing so rapidly?</h3>
+                        <div class="insight-card">
+                            <div class="insight-icon">💡</div>
+                            <div class="insight-text">
+                                <h4>Innovation & Quality</h4>
+                                <p>NZ studios create unique, high-quality games that stand out globally</p>
+                            </div>
+                        </div>
+                        <div class="insight-card">
+                            <div class="insight-icon">🌏</div>
+                            <div class="insight-text">
+                                <h4>Global Digital Distribution</h4>
+                                <p>Platforms like Steam, Epic, and mobile stores enable worldwide reach</p>
+                            </div>
+                        </div>
+                        <div class="insight-card">
+                            <div class="insight-icon">🎓</div>
+                            <div class="insight-text">
+                                <h4>Skilled Workforce</h4>
+                                <p>Strong education system and tech sector provide talented developers</p>
+                            </div>
+                        </div>
+                        <div class="insight-card">
+                            <div class="insight-icon">🏛️</div>
+                            <div class="insight-text">
+                                <h4>Government Support</h4>
+                                <p>Tax incentives and grants encourage game development</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="speaker-notes">
+                The growth has been extraordinary - from $143M in 2018 to $759M in 2025, that's over 400% growth! This is driven by world-class games, digital distribution platforms, a skilled workforce, and supportive government policies.
+            </div>
+        </section>
+
+        <!-- Slide 3: Grinding Gear Games -->
+        <section class="slide" data-slide="3">
+            <div class="slide-content">
+                <h2 class="slide-title">Major Developer: Grinding Gear Games</h2>
+                <div class="studio-showcase">
+                    <div class="studio-header">
+                        <div class="studio-logo">GGG</div>
+                        <div class="studio-info">
+                            <h3>Grinding Gear Games</h3>
+                            <p class="location">📍 Auckland, New Zealand</p>
+                        </div>
+                    </div>
+                    <div class="studio-content">
+                        <div class="studio-left">
+                            <h4>Flagship Games</h4>
+                            <div class="game-showcase">
+                                <div class="game-card">
+                                    <div class="game-image poe1"></div>
+                                    <div class="game-details">
+                                        <h5>Path of Exile</h5>
+                                        <p>Free-to-play action RPG</p>
+                                        <p class="game-stat">50M+ Players Worldwide</p>
+                                    </div>
+                                </div>
+                                <div class="game-card">
+                                    <div class="game-image poe2"></div>
+                                    <div class="game-details">
+                                        <h5>Path of Exile 2</h5>
+                                        <p>Highly anticipated sequel</p>
+                                        <p class="game-stat">Launching 2024</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="studio-right">
+                            <h4>International Success</h4>
+                            <div class="achievement-list">
+                                <div class="achievement">✓ Competes directly with Diablo and other AAA RPGs</div>
+                                <div class="achievement">✓ Acquired by Tencent (majority stake)</div>
+                                <div class="achievement">✓ Constant updates and expansions for 10+ years</div>
+                                <div class="achievement">✓ Massive international player base</div>
+                                <div class="achievement">✓ New Zealand's most successful game franchise</div>
+                            </div>
+                            <div class="highlight-box">
+                                <p><strong>Impact:</strong> Path of Exile competes with industry giants like Blizzard Entertainment, proving NZ studios can create world-class titles.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="speaker-notes">
+                Grinding Gear Games is New Zealand's biggest success story. Path of Exile has over 50 million players and competes directly with games from massive studios. They've proven that a team in Auckland can create a game that rivals anything from major publishers.
+            </div>
+        </section>
+
+        <!-- Slide 4: Ninja Kiwi -->
+        <section class="slide" data-slide="4">
+            <div class="slide-content">
+                <h2 class="slide-title">Major Developer: Ninja Kiwi</h2>
+                <div class="studio-showcase">
+                    <div class="studio-header">
+                        <div class="studio-logo ninja">🥝</div>
+                        <div class="studio-info">
+                            <h3>Ninja Kiwi</h3>
+                            <p class="location">📍 Auckland, New Zealand</p>
+                        </div>
+                    </div>
+                    <div class="studio-content">
+                        <div class="studio-left">
+                            <h4>Popular Games</h4>
+                            <div class="game-showcase">
+                                <div class="game-card">
+                                    <div class="game-image bloons"></div>
+                                    <div class="game-details">
+                                        <h5>Bloons TD 6</h5>
+                                        <p>Tower defense perfection</p>
+                                        <p class="game-stat">15M+ Downloads</p>
+                                    </div>
+                                </div>
+                                <div class="game-card">
+                                    <div class="game-image bloons-franchise"></div>
+                                    <div class="game-details">
+                                        <h5>Bloons Franchise</h5>
+                                        <p>Iconic gaming series</p>
+                                        <p class="game-stat">1 Billion+ Game Plays</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="studio-right">
+                            <h4>Global Impact</h4>
+                            <div class="achievement-list">
+                                <div class="achievement">✓ One of the most successful tower defense franchises</div>
+                                <div class="achievement">✓ Cross-platform success (PC, Mobile, Console)</div>
+                                <div class="achievement">✓ Active community with millions of players</div>
+                                <div class="achievement">✓ Regular content updates keep players engaged</div>
+                                <div class="achievement">✓ Top-rated games on Steam and mobile stores</div>
+                            </div>
+                            <div class="highlight-box">
+                                <p><strong>Fun Fact:</strong> The Bloons franchise started as simple Flash games and evolved into one of gaming's most beloved tower defense series, with over 1 billion plays worldwide!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="speaker-notes">
+                Ninja Kiwi shows how a focused franchise can build massive success. The Bloons series has over 1 billion plays globally. Bloons TD 6 is one of the most successful tower defense games ever, with millions of active players across all platforms.
+            </div>
+        </section>
+
+        <!-- Slide 5: PikPok -->
+        <section class="slide" data-slide="5">
+            <div class="slide-content">
+                <h2 class="slide-title">Major Developer: PikPok</h2>
+                <div class="studio-showcase">
+                    <div class="studio-header">
+                        <div class="studio-logo pikpok">PP</div>
+                        <div class="studio-info">
+                            <h3>PikPok</h3>
+                            <p class="location">📍 Wellington, New Zealand</p>
+                        </div>
+                    </div>
+                    <div class="studio-content">
+                        <div class="studio-left">
+                            <h4>Hit Games</h4>
+                            <div class="game-showcase">
+                                <div class="game-card">
+                                    <div class="game-image into-dead"></div>
+                                    <div class="game-details">
+                                        <h5>Into the Dead</h5>
+                                        <p>Zombie survival runner</p>
+                                        <p class="game-stat">90M+ Downloads</p>
+                                    </div>
+                                </div>
+                                <div class="game-card">
+                                    <div class="game-image clusterduck"></div>
+                                    <div class="game-details">
+                                        <h5>Clusterduck</h5>
+                                        <p>Quirky duck evolution game</p>
+                                        <p class="game-stat">Viral Mobile Hit</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="studio-right">
+                            <h4>Mobile Gaming Powerhouse</h4>
+                            <div class="achievement-list">
+                                <div class="achievement">✓ 350+ million downloads across all games</div>
+                                <div class="achievement">✓ New Zealand's oldest mobile game studio</div>
+                                <div class="achievement">✓ Over 20 years of game development experience</div>
+                                <div class="achievement">✓ Specializes in free-to-play mobile titles</div>
+                                <div class="achievement">✓ Multiple Apple and Google feature awards</div>
+                            </div>
+                            <div class="highlight-box">
+                                <p><strong>Industry Pioneer:</strong> PikPok has been creating games since 1997 and has become one of the most successful mobile game developers in the Southern Hemisphere.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="speaker-notes">
+                PikPok is a mobile gaming leader with over 350 million downloads. Based in Wellington, they've been creating games for over 20 years. Their games like Into the Dead have achieved massive global success, showing NZ's strength in mobile gaming.
+            </div>
+        </section>
+
+        <!-- Slide 6: Black Salt Games -->
+        <section class="slide" data-slide="6">
+            <div class="slide-content">
+                <h2 class="slide-title">Indie Success: Black Salt Games</h2>
+                <div class="studio-showcase indie">
+                    <div class="studio-header">
+                        <div class="studio-logo black-salt">⚓</div>
+                        <div class="studio-info">
+                            <h3>Black Salt Games</h3>
+                            <p class="location">📍 Auckland, New Zealand</p>
+                            <span class="indie-badge">🌟 Independent Studio</span>
+                        </div>
+                    </div>
+                    <div class="studio-content">
+                        <div class="featured-game-large">
+                            <div class="game-image-large dredge"></div>
+                            <div class="game-info-large">
+                                <h3>DREDGE</h3>
+                                <p class="game-tagline">"Fish by day, Discover by night"</p>
+                                <div class="awards-section">
+                                    <h4>🏆 Awards & Recognition</h4>
+                                    <div class="awards-grid">
+                                        <div class="award-badge">Multiple Game Awards</div>
+                                        <div class="award-badge">95% Positive Reviews</div>
+                                        <div class="award-badge">1M+ Copies Sold</div>
+                                        <div class="award-badge">Critics' Choice</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="indie-success-story">
+                            <h4>How Indies Can Achieve Global Success</h4>
+                            <div class="success-factors">
+                                <div class="factor">
+                                    <span class="factor-icon">🎨</span>
+                                    <h5>Unique Vision</h5>
+                                    <p>Create something different that stands out</p>
+                                </div>
+                                <div class="factor">
+                                    <span class="factor-icon">💎</span>
+                                    <h5>Quality Over Size</h5>
+                                    <p>Polish and refinement beat big budgets</p>
+                                </div>
+                                <div class="factor">
+                                    <span class="factor-icon">🤝</span>
+                                    <h5>Community Focus</h5>
+                                    <p>Engage with players throughout development</p>
+                                </div>
+                                <div class="factor">
+                                    <span class="factor-icon">🚀</span>
+                                    <h5>Smart Marketing</h5>
+                                    <p>Use social media and word-of-mouth</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="speaker-notes">
+                Black Salt Games shows that small independent teams can achieve massive success. DREDGE, their fishing horror game, sold over 1 million copies and won numerous awards. It proves that with creativity and quality, small NZ studios can compete globally.
+            </div>
+        </section>
+
+        <!-- Slide 7: Economic Impact -->
+        <section class="slide" data-slide="7">
+            <div class="slide-content">
+                <h2 class="slide-title">Economic Impact on New Zealand</h2>
+                <div class="economic-container">
+                    <div class="economic-chart">
+                        <canvas id="economicChart"></canvas>
+                    </div>
+                    <div class="economic-details">
+                        <div class="impact-category">
+                            <h3>💼 High-Skilled Job Creation</h3>
+                            <div class="job-types">
+                                <div class="job-card">Software Developers</div>
+                                <div class="job-card">3D Artists & Animators</div>
+                                <div class="job-card">Game Designers</div>
+                                <div class="job-card">Audio Engineers</div>
+                                <div class="job-card">Marketing Specialists</div>
+                                <div class="job-card">Project Managers</div>
+                            </div>
+                        </div>
+                        <div class="impact-category">
+                            <h3>📊 Key Contributions</h3>
+                            <div class="contribution-list">
+                                <div class="contribution-item">
+                                    <span class="contribution-icon">🌍</span>
+                                    <div>
+                                        <strong>Export Powerhouse</strong>
+                                        <p>95% of revenue from international markets</p>
+                                    </div>
+                                </div>
+                                <div class="contribution-item">
+                                    <span class="contribution-icon">💰</span>
+                                    <div>
+                                        <strong>Foreign Investment</strong>
+                                        <p>Attracting global publishers and investors</p>
+                                    </div>
+                                </div>
+                                <div class="contribution-item">
+                                    <span class="contribution-icon">🔧</span>
+                                    <div>
+                                        <strong>Tech Sector Growth</strong>
+                                        <p>Strengthening NZ's overall technology ecosystem</p>
+                                    </div>
+                                </div>
+                                <div class="contribution-item">
+                                    <span class="contribution-icon">🎓</span>
+                                    <div>
+                                        <strong>Education & Training</strong>
+                                        <p>Driving innovation in universities and schools</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="speaker-notes">
+                The gaming industry creates high-paying jobs in software development, art, design, and marketing. It contributes significantly to exports and attracts international investment. The industry also strengthens New Zealand's technology sector and education system.
+            </div>
+        </section>
+
+        <!-- Slide 8: Government Support -->
+        <section class="slide" data-slide="8">
+            <div class="slide-content">
+                <h2 class="slide-title">Government Support & Industry Development</h2>
+                <div class="government-support">
+                    <div class="support-header">
+                        <h3>🏛️ NZ Game Development Sector Rebate</h3>
+                        <p class="rebate-description">Tax incentive program helping studios reduce costs and compete globally</p>
+                    </div>
+                    <div class="support-grid">
+                        <div class="support-card">
+                            <div class="support-icon">💳</div>
+                            <h4>Tax Rebates</h4>
+                            <p>Financial incentives for qualifying game development projects</p>
+                        </div>
+                        <div class="support-card">
+                            <div class="support-icon">🎯</div>
+                            <h4>Funding Programs</h4>
+                            <p>Grants and support for startups and innovative projects</p>
+                        </div>
+                        <div class="support-card">
+                            <div class="support-icon">🏢</div>
+                            <h4>Industry Organizations</h4>
+                            <p>NZ Game Developers Association (NZGDA) advocacy and networking</p>
+                        </div>
+                        <div class="support-card">
+                            <div class="support-icon">📚</div>
+                            <h4>Education Support</h4>
+                            <p>University programs and training initiatives</p>
+                        </div>
+                    </div>
+                    <div class="impact-statement">
+                        <h3>Why Government Support Matters</h3>
+                        <div class="impact-reasons">
+                            <div class="reason-box">
+                                <h4>🌟 Retain Talent</h4>
+                                <p>Keeps skilled developers in New Zealand instead of moving overseas</p>
+                            </div>
+                            <div class="reason-box">
+                                <h4>📈 Accelerate Growth</h4>
+                                <p>Enables studios to scale and compete with international giants</p>
+                            </div>
+                            <div class="reason-box">
+                                <h4>🚀 Foster Innovation</h4>
+                                <p>Encourages risk-taking and creative game development</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="speaker-notes">
+                Government support through rebates and grants is crucial for the industry's growth. It helps studios compete globally, keeps talented developers in New Zealand, and encourages innovation. This support has been key to the industry's 400% growth.
+            </div>
+        </section>
+
+        <!-- Slide 9: Future Potential -->
+        <section class="slide" data-slide="9">
+            <div class="slide-content">
+                <h2 class="slide-title">Future Potential & Opportunities</h2>
+                <div class="future-container">
+                    <div class="future-stat">
+                        <h3 class="future-number">$1B+</h3>
+                        <p class="future-label">Projected Industry Value</p>
+                        <p class="future-sublabel">Expected within next 5-10 years</p>
+                    </div>
+                    <div class="opportunities-grid">
+                        <div class="opportunity-card">
+                            <div class="opp-icon">📱</div>
+                            <h4>Mobile Gaming</h4>
+                            <p>Continued growth in mobile platforms with 5G and cloud gaming</p>
+                            <div class="opp-potential">High Growth Potential</div>
+                        </div>
+                        <div class="opportunity-card">
+                            <div class="opp-icon">🥽</div>
+                            <h4>Virtual Reality (VR)</h4>
+                            <p>Next-generation immersive experiences for players worldwide</p>
+                            <div class="opp-potential">Emerging Market</div>
+                        </div>
+                        <div class="opportunity-card">
+                            <div class="opp-icon">✨</div>
+                            <h4>Augmented Reality (AR)</h4>
+                            <p>Location-based and AR games creating new experiences</p>
+                            <div class="opp-potential">Growing Fast</div>
+                        </div>
+                        <div class="opportunity-card">
+                            <div class="opp-icon">🤖</div>
+                            <h4>AI in Game Dev</h4>
+                            <p>Machine learning revolutionizing game design and production</p>
+                            <div class="opp-potential">Revolutionary</div>
+                        </div>
+                        <div class="opportunity-card">
+                            <div class="opp-icon">🎮</div>
+                            <h4>Esports</h4>
+                            <p>Competitive gaming creating new revenue streams and audiences</p>
+                            <div class="opp-potential">Billion-Dollar Market</div>
+                        </div>
+                        <div class="opportunity-card">
+                            <div class="opp-icon">☁️</div>
+                            <h4>Cloud Gaming</h4>
+                            <p>Streaming technology opening new distribution channels</p>
+                            <div class="opp-potential">Game Changer</div>
+                        </div>
+                    </div>
+                    <div class="expert-opinion">
+                        <h3>💡 Expert Perspective</h3>
+                        <p>"New Zealand's gaming industry has all the ingredients for continued success: talented developers, government support, and a track record of creating globally competitive games. The industry could easily become a billion-dollar sector within the next decade."</p>
+                        <p class="expert-attribution">— Industry Analysts, 2025</p>
+                    </div>
+                </div>
+            </div>
+            <div class="speaker-notes">
+                The future looks incredibly bright. Experts predict the industry could reach $1 billion in value. Opportunities in VR, AR, AI, mobile gaming, and esports offer multiple pathways for growth. New Zealand's proven track record positions it well for this expansion.
+            </div>
+        </section>
+
+        <!-- Final Slide: Conclusion -->
+        <section class="slide" data-slide="10">
+            <div class="slide-content conclusion-slide">
+                <h2 class="slide-title">Conclusion</h2>
+                <div class="conclusion-content">
+                    <div class="key-points">
+                        <div class="point">
+                            <div class="point-icon">🌟</div>
+                            <h3>Respected Gaming Hub</h3>
+                            <p>New Zealand has established itself as a global center for innovative game development</p>
+                        </div>
+                        <div class="point">
+                            <div class="point-icon">🏆</div>
+                            <h3>Global Success</h3>
+                            <p>Major studios like Grinding Gear Games, Ninja Kiwi, and PikPok compete internationally</p>
+                        </div>
+                        <div class="point">
+                            <div class="point-icon">💰</div>
+                            <h3>Economic Contribution</h3>
+                            <p>NZ$759M revenue, creating high-skilled jobs and boosting exports</p>
+                        </div>
+                        <div class="point">
+                            <div class="point-icon">📈</div>
+                            <h3>Bright Future</h3>
+                            <p>Strong growth trajectory with government support and emerging technologies</p>
+                        </div>
+                    </div>
+                    <div class="final-message">
+                        <h3 class="closing-statement">
+                            "New Zealand proves that a small country can have a <span class="highlight">major impact</span> on the global gaming industry through <span class="highlight">creativity</span>, <span class="highlight">innovation</span>, and <span class="highlight">technology</span>."
+                        </h3>
+                    </div>
+                    <div class="thank-you">
+                        <h2>Thank You!</h2>
+                        <p>Questions?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="speaker-notes">
+                To conclude: New Zealand has transformed from a small player to a respected global gaming hub. With nearly $760 million in revenue, successful studios competing worldwide, and strong future potential, the industry is a major part of New Zealand's economy and technology sector. The combination of creativity, innovation, and government support shows that even small countries can make a big impact in global industries.
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Speaker Notes Panel (Toggle) -->
+    <div class="speaker-notes-panel" id="speakerNotesPanel">
+        <div class="notes-header">
+            <h3>Speaker Notes</h3>
+            <button class="close-notes" id="closeNotes">✕</button>
+        </div>
+        <div class="notes-content" id="notesContent"></div>
+    </div>
+
+    <!-- Notes Toggle Button -->
+    <button class="notes-toggle" id="notesToggle">📝 Notes</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
